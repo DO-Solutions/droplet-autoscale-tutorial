@@ -147,6 +147,38 @@ Droplet autoscaling requires a load balancer. You can find the DigitalOcean load
 
 ## Examples
 
+### Status
+
+Return the status of the cluster including load metrics
+
+```bash
+curl -X GET "https://faas-lon1-917a94a7.doserverless.co/api/v1/web/fn-01b08248-2b36-420c-ba27-56b52d3ac42f/autoscale/scale?op=status" \
+  -H "Content-Type: application/json"
+```
+
+```json
+{
+ "dropletMetrics": [
+  {
+   "ID": "scale-me",
+   "valid": true,
+   "load": 0,
+   "freeMemory": 235.454464,
+   "outboundBandwidth": 0.002357839671014176
+  }
+ ],
+ "clusterMetrics": {
+  "ID": "",
+  "valid": true,
+  "load": 0,
+  "freeMemory": 235.454464,
+  "outboundBandwidth": 0.002357839671014176
+ },
+ "scaleUp": true,
+ "scaleDown": false
+}
+```
+
 ## Conclusion
 
 
