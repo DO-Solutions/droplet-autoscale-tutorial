@@ -15,7 +15,7 @@
 
 ## Introduction
 
-- Droplet cluster autoscaling is one file of code called “scale.go” that can run as a scheduled or standalone function. It must be passed configuration parameters including the droplet tag for the cluster, load balancer name, a DigitalOcean API key, etc. and an operation to perform.
+- Droplet cluster autoscaling is one file of code called [“scale.go”](https://github.com/DO-Solutions/droplet-autoscale/blob/main/packages/autoscale/scale/scale.go) that can run as a scheduled or standalone function. It must be passed configuration parameters including the droplet tag for the cluster, load balancer name, a DigitalOcean API key, etc. and an operation to perform.
 
 The operation to perform (op) must be one of:
 
