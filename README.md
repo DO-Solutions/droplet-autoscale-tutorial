@@ -103,12 +103,12 @@ To create a Droplet via the command line, follow these steps:
     doctl serverless connect
     ```
 
-3. Clone the function from this repo `git clone https://github.com/jkpe/droplet-autoscale`
+3. Clone the function from this repo `git clone https://github.com/DO-Solutions/droplet-autoscale`
 
 4. Deploy the function
 
     ```bash
-    doctl serverless deploy scale
+    doctl serverless deploy droplet-autoscale
     ```
 
 ### Environmental Variables
