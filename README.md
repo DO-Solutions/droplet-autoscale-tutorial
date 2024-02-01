@@ -19,11 +19,15 @@
 
 ### About DigitalOcean Droplets
 
+<details>
 > [DigitalOcean Droplets](https://www.digitalocean.com/products/droplets) are Linux-based virtual machines (VMs) that run on top of virtualized hardware. Each Droplet you create is a new server you can use, either standalone or as part of a larger, cloud-based infrastructure.
+</details>
 
 ### About DigitalOcean Functions
 
+<details>
 > [Functions](https://www.digitalocean.com/products/functions) are blocks of code that run on demand without the need to manage any infrastructure. Develop on your local machine, test your code from the command line (using doctl), then deploy to a production namespace or App Platform — no servers required.
+</details>
 
 ### Architecture diagram
 <!-- image
