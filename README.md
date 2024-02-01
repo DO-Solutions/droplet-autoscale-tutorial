@@ -38,9 +38,9 @@ Example:
 > [Functions](https://www.digitalocean.com/products/functions) are blocks of code that run on demand without the need to manage any infrastructure. Develop on your local machine, test your code from the command line (using doctl), then deploy to a production namespace or App Platform — no servers required.
 
 ## Architecture diagram
-
+<!-- image
 <img src="./assets/x.png" alt="Architecture diagram" width="800">
-
+ -->
 ### Prerequisites
 
 1. A DigitalOcean account ([Log in](https://cloud.digitalocean.com/login))
