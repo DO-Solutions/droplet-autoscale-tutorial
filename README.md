@@ -85,9 +85,15 @@ To create a Droplet via the command line, follow these steps:
 
 ### Create a snapshot to be used as Droplet template image
 
-### Tag your Droplets
+You must take a snapshot of your base droplet and that snapshot will be the system image used by all clone droplets. The snapshot should have server(s) that automatically start when the new system boots. The snapshotName is the name of this base droplet snapshot.
+
+### Tag your base Droplet
+
+The base droplet must have a tag. All clones that are created will have this tag on them.
 
 ### Create a Load Balancer
+
+Droplet autoscaling requires a load balancer. You can find the DigitalOcean load balancer under the Network section of the DigitalOcean user-interface. The base droplet must be added to the load balancer. Clone droplets will automatically be added and removed from the load balancer cluster as the system scales up and down. The loadBalancerName is the name of this load balancer.
 
 ### Deploy the function
 
