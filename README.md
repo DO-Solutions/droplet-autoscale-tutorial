@@ -89,28 +89,6 @@ To create a Droplet via the command line, follow these steps:
 
 ### Create a Load Balancer
 
-### Environmental Variables
-
-### The following environment variables are required:
-
-* **API_TOKEN** a DigitalOcean API token
-* **BASE_DROPLET** the name of the base droplet to scale
-* **SNAPSHOT** To use droplet autoscaling, you must take a snapshot of your base droplet and that snapshot will be the system image used by all clone droplets. The snapshot should have server(s) that automatically start when the new system boots. The snapshotName is the name of this base droplet snapshot.
-* **CLUSTER_TAG** the droplet tag for the cluster. The base droplet must have this tag. All clones that are created will have this tag on them.
-* **CLONE_PREFIX** the name of clone droplets is the dropletNamePrefix and the number of the clone. The first clone will be <prefix>01, the second <prefix>02, etc. An example of a droplet name prefix is “auto”
-* **LOAD_BALANCER** Droplet autoscaling requires a load balancer. You can find the DigitalOcean load balancer under the Network section of the DigitalOcean user-interface. The base droplet must be added to the load balancer. Clone droplets will automatically be added and removed from the load balancer cluster as the system scales up and down. The loadBalancerName is the name of this load balancer.
-
-### The following environment variables are optional:
-    
-* **MAX_DROPLETS_IN_CLUSTER** Defaults to 5. The maximum number of droplets in the cluster inclusive of the base droplet. The system will not scale up beyond this number of droplets.
-* **SCALING_INTERVAL** Defaults to 120 seconds. After a clone droplet is added or removed, the system will stop autoscaling up or down until this interval has passed. The system adds or removes clones automatically based on load metrics. These metrics take some time to stabilize after a clone is added or removed. The scalingInterval is the amount of time it takes the system to stabilize, in seconds, after a droplet is added or removed and should not only allow the system to stabilize but also account for the time it takes the new load metrics from the droplets to be available.
-* **SCALE_UP_WHEN_LOAD** When the average CPU load metric is greater than this value, the system will recommend scaling up.
-* **SCALE_UP_WHEN_FREE_MEMORY** When the average droplet free memory is below this value, in MB, the system will recommend scaling up.
-* **SCALE_UP_WHEN_OUTBOUND_BANDWIDTH** When the average droplet bandwidth, in MBps, is greater than this value, the system will recommend scaling up.
-* **SCALE_DOWN_WHEN_LOAD** When the average CPU load metric is less than this value and all other SCALE_DOWN metric values are within range, the system will recommend scaling down.
-* **SCALE_DOWN_WHEN_FREE_MEMORY** When the average droplet free memory is above this value and all other SCALE_DOWN metric values are within range, in MB, the system will recommend scaling down.
-* **SCALE_DOWN_WHEN_OUTBOUND_BANDWIDTH** When the average droplet bandwidth, in MBps, is less than this value and all other SCALE_DOWN metric values are within range, the system will recommend scaling down.
-
 ### Deploy the function
 
 1. Create a Functions namespace
@@ -132,6 +110,28 @@ To create a Droplet via the command line, follow these steps:
     ```bash
     doctl serverless deploy scale
     ```
+
+### Environmental Variables
+
+### The following environment variables are required:
+
+* **API_TOKEN** a DigitalOcean API token
+* **BASE_DROPLET** the name of the base droplet to scale
+* **SNAPSHOT** To use droplet autoscaling, you must take a snapshot of your base droplet and that snapshot will be the system image used by all clone droplets. The snapshot should have server(s) that automatically start when the new system boots. The snapshotName is the name of this base droplet snapshot.
+* **CLUSTER_TAG** the droplet tag for the cluster. The base droplet must have this tag. All clones that are created will have this tag on them.
+* **CLONE_PREFIX** the name of clone droplets is the dropletNamePrefix and the number of the clone. The first clone will be <prefix>01, the second <prefix>02, etc. An example of a droplet name prefix is “auto”
+* **LOAD_BALANCER** Droplet autoscaling requires a load balancer. You can find the DigitalOcean load balancer under the Network section of the DigitalOcean user-interface. The base droplet must be added to the load balancer. Clone droplets will automatically be added and removed from the load balancer cluster as the system scales up and down. The loadBalancerName is the name of this load balancer.
+
+### The following environment variables are optional:
+    
+* **MAX_DROPLETS_IN_CLUSTER** Defaults to 5. The maximum number of droplets in the cluster inclusive of the base droplet. The system will not scale up beyond this number of droplets.
+* **SCALING_INTERVAL** Defaults to 120 seconds. After a clone droplet is added or removed, the system will stop autoscaling up or down until this interval has passed. The system adds or removes clones automatically based on load metrics. These metrics take some time to stabilize after a clone is added or removed. The scalingInterval is the amount of time it takes the system to stabilize, in seconds, after a droplet is added or removed and should not only allow the system to stabilize but also account for the time it takes the new load metrics from the droplets to be available.
+* **SCALE_UP_WHEN_LOAD** When the average CPU load metric is greater than this value, the system will recommend scaling up.
+* **SCALE_UP_WHEN_FREE_MEMORY** When the average droplet free memory is below this value, in MB, the system will recommend scaling up.
+* **SCALE_UP_WHEN_OUTBOUND_BANDWIDTH** When the average droplet bandwidth, in MBps, is greater than this value, the system will recommend scaling up.
+* **SCALE_DOWN_WHEN_LOAD** When the average CPU load metric is less than this value and all other SCALE_DOWN metric values are within range, the system will recommend scaling down.
+* **SCALE_DOWN_WHEN_FREE_MEMORY** When the average droplet free memory is above this value and all other SCALE_DOWN metric values are within range, in MB, the system will recommend scaling down.
+* **SCALE_DOWN_WHEN_OUTBOUND_BANDWIDTH** When the average droplet bandwidth, in MBps, is less than this value and all other SCALE_DOWN metric values are within range, the system will recommend scaling down.
 
 ## Examples
 
