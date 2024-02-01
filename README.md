@@ -9,7 +9,7 @@
 
 - [Architecture diagram](#architecture-diagram)
 - [How to use](#how-to-use)
-- [Environment variables:](#environmental-variables)
+- [Environment variables](#environmental-variables)
 - [Deploy the function](#deploy-the-function)
 - [Benchmarks](#benchmarks)
 
@@ -44,9 +44,8 @@ Example:
 ### Prerequisites
 
 1. A DigitalOcean account ([Log in](https://cloud.digitalocean.com/login))
-2. A DigitalOcean [Spaces Object Storage subscription](https://docs.digitalocean.com/products/spaces/how-to/create/)
-3. doctl CLI([tutorial](https://docs.digitalocean.com/reference/doctl/how-to/install/))
-4. To use doctl with our serverless Functions product, you must first [install a software extension](https://docs.digitalocean.com/reference/doctl/how-to/install/#step-5-install-serverless-functions-support-optional), then use it to connect to the development namespace.
+2. doctl CLI - [How to install](https://docs.digitalocean.com/reference/doctl/how-to/install/)
+3. To use doctl with our serverless Functions product, you must first [install a software extension](https://docs.digitalocean.com/reference/doctl/how-to/install/#step-5-install-serverless-functions-support-optional), then use it to connect to the development namespace.
 
 ### Additionally you will need:
 
