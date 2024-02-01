@@ -8,9 +8,9 @@
 </div>
 
 - [Architecture diagram](#architecture-diagram)
-- [How to use it](#)
-- [Environment variables:](#)
-- [Scaling Up and Down](#)
+- [How to use](#how-to-use)
+- [Environment variables:](#environmental-variables)
+- [Deploy the function](#deploy-the-function)
 - [Benchmarks](#benchmarks)
 
 ## Introduction
@@ -53,7 +53,7 @@ Example:
 1. A Base Droplet, this is the first Droplet that will be used for scaling
 2. A Snapshot of an image you want to scale. To use droplet autoscaling, you must take a snapshot of your base droplet and that snapshot will be the system image used by all clone droplets. The snapshot should have server(s) that automatically start when the new system boots.
 
-## How to use
+## How to use
 
 ### Deploy a DigitalOcean Droplet
 
