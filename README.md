@@ -137,7 +137,7 @@ To create a Droplet via the command line, follow these steps:
 
 ## Conclusion
 
-In this guide, we deployed a DigitalOcean Managed Kubernetes cluster. We setup [k8s-csi-s3](https://github.com/yandex-cloud/k8s-csi-s3), which is a [GeeseFS-based](https://github.com/yandex-cloud/geesefs) CSI for mounting S3 buckets as PersistentVolumes by deploy the driver, creating a new storage class and deploying a test pod with RWX storage.
+
 
 ## References
 
