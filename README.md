@@ -17,18 +17,6 @@
 
 - Droplet cluster autoscaling is one file of code called [“scale.go”](https://github.com/DO-Solutions/droplet-autoscale/blob/main/packages/autoscale/scale/scale.go) that can run as a scheduled or standalone function. It must be passed configuration parameters including the droplet tag for the cluster, load balancer name, a DigitalOcean API key, etc. and an operation to perform.
 
-The operation to perform (op) must be one of:
-
-* **info** return internal configuration information about the cluster
-* **status** return the status of the cluster including load metrics
-* **up** scale the cluster up manually by adding a droplet
-* **down** scale the cluster down manually by deleting the last droplet added
-* **auto** autoscale the cluster up or down based on load metrics
-
-Example:
-
-* <.. function url path..>/scale?op=info
-
 ### About DigitalOcean Droplets
 
 > [DigitalOcean Droplets](https://www.digitalocean.com/products/droplets) are Linux-based virtual machines (VMs) that run on top of virtualized hardware. Each Droplet you create is a new server you can use, either standalone or as part of a larger, cloud-based infrastructure.
@@ -37,7 +25,7 @@ Example:
 
 > [Functions](https://www.digitalocean.com/products/functions) are blocks of code that run on demand without the need to manage any infrastructure. Develop on your local machine, test your code from the command line (using doctl), then deploy to a production namespace or App Platform — no servers required.
 
-## Architecture diagram
+### Architecture diagram
 <!-- image
 <img src="./assets/x.png" alt="Architecture diagram" width="800">
  -->
@@ -53,6 +41,18 @@ Example:
 2. A Snapshot of an image you want to scale. To use droplet autoscaling, you must take a snapshot of your base droplet and that snapshot will be the system image used by all clone droplets. The snapshot should have server(s) that automatically start when the new system boots.
 
 ## How to use
+
+The operation to perform (op) must be one of:
+
+* **info** return internal configuration information about the cluster
+* **status** return the status of the cluster including load metrics
+* **up** scale the cluster up manually by adding a droplet
+* **down** scale the cluster down manually by deleting the last droplet added
+* **auto** autoscale the cluster up or down based on load metrics
+
+Example:
+
+* <.. function url path..>/scale?op=info
 
 ### Deploy a DigitalOcean Droplet
 
