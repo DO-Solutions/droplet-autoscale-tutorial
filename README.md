@@ -4,7 +4,7 @@
     <img src="./assets/DO_Logo-Blue.png" alt="Logo" >
   </a>
 
-<h3>Droplet cluster autoscaling allows a developer to create a cluster of Droplets that automatically scales based on load. To use cluster autoscaling, a developer creates a base Droplet, takes a snapshot of the Droplet and adds the Droplet to a load balancer. Clones of the base Droplet can be automatically added or removed from the cluster as load changes.</h3>
+<h3>Droplet cluster autoscaling uses the power of DigitalOcean Functions to enable a developer to create a cluster of Droplets that automatically scale based on load. To use cluster autoscaling, a developer creates a base Droplet, takes a snapshot of the Droplet and adds the Droplet to a load balancer. Clones of the base Droplet can be automatically added or removed from the cluster as load changes using a DigitalOcean Function written in Go.</h3>
 </div>
 
 - [Architecture diagram](#architecture-diagram)
