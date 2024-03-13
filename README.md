@@ -179,19 +179,8 @@ curl -X GET "https://faas-lon1-917a94a7.doserverless.co/api/v1/web/fn-01b08248-2
 }
 ```
 
-## Conclusion
-
-
-
 ## References
 
-Make some reference to internal DO engineering originally creating this.
+Many thanks to the original DigitalOcean engineer that crafted this code who is no longer with us.
 
-<!-- CONTACT
-# Contact
-
-Jack Pearce, Solutions Engineer - jpearce@digitalocean.com
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
- -->
+If you wish to learn more about DigitalOcean's services, you are welcome to reach out to the sales team at sales@digitalocean.com. A global team of talented engineers will be happy to provide assistance.
